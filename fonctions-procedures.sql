@@ -1,12 +1,12 @@
 CREATE OR REPLACE PROCEDURE insert_country(name VARCHAR)
 LANGUAGE PLPGSQL
 AS $$
-DECLARE
-temp_pop int := RANDOM() * 100000000;
-temp_density int := RANDOM() * 1000;
-temp_area int := temp_pop/temp_density;
-BEGIN
-INSERT INTO countries VALUES (name, temp_pop, temp_density, temp_area);
+    DECLARE
+        temp_pop int := RANDOM() * 100000000;
+        temp_density int := RANDOM() * 1000;
+        temp_area int := temp_pop/temp_density;
+    BEGIN
+        INSERT INTO countries VALUES (name, temp_pop, temp_density, temp_area);
 END;
 $$;
 
@@ -27,16 +27,18 @@ AS $$
     END; 
 $$ ;
 
-CREATE OR REPLACE FUNCTION viewcountry(text) RETURNS countries AS $$
+CREATE OR REPLACE FUNCTION viewcountry(text) RETURNS countries
+AS $$
     SELECT * FROM countries WHERE country= $1;
-$$ LANGUAGE SQL;
+$$
+LANGUAGE SQL;
 
 CREATE OR REPLACE FUNCTION set_insertion()
 RETURNS TRIGGER 
 LANGUAGE PLPGSQL
 AS $$
-BEGIN
-NEW.last_update := now();
-RETURN NEW;
-END;
+    BEGIN
+        NEW.last_update := now();
+        RETURN NEW;
+    END;
 $$;
