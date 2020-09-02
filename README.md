@@ -1,6 +1,6 @@
 # Les-pays-en-chiffre
 
-## Généralités/installation (à modifier)
+## Généralités
 ### Description
 Réalisation du brief "Les Pays en Chiffre". Création de fonctions, procédures et triggers pour interroger une base de données hébergée en mode SaaS avec postgresql.
 
