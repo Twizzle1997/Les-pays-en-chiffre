@@ -8,9 +8,9 @@ Réalisation du brief "Les Pays en Chiffre". Création de fonctions, procédures
 Ouvrir une instance [postgresql](https://www.postgresql.fr/).
 
 ### Installation
-Remplir la base de données en exécutant `filtered-countries.sql`.  
-Ajouter les fonctions et procédures en exécutant `fonctions-procedures.sql`.  
-Installer le trigger en exécutant `Trigger.sql`.
+Remplir la base de données en exécutant `1_filtered-countries.sql`.  
+Ajouter les fonctions et procédures en exécutant `2_fonctions-procedures.sql`.  
+Installer le trigger en exécutant `3_trigger.sql`.
 
 ## Utilisation
 #### insert_country()
