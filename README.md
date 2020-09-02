@@ -25,7 +25,7 @@ Pour visualiser un pays, utiliser la fonction avec la commande :
 SELECT * FROM viewcountry('<pays>');
 ```
 ### density_range()
-La fonction `density_range()` retourne le pays dont le nom est donné en paramètres et indique sa catégorie selon la densité de population. Les pays sont regroupés par 4 tranches : *densément peuplés*, *densité intermédiaire*, *peu denses*, *très peu denses*.
+La fonction `density_range()` retourne le pays dont le nom est donné en paramètre et indique sa catégorie selon la densité de population. Les pays sont regroupés par 4 tranches : *densément peuplés*, *densité intermédiaire*, *peu denses*, *très peu denses*.
 Pour trouver la tranche d'un pays, utiliser la fonction avec la commande :
 ``` sql
 SELECT * FROM density_range('<pays>');
